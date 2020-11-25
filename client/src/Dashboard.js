@@ -16,10 +16,10 @@ export default function ContainedButtons() {
 
   return (
     <div className={classes.root}>
-      <Button variant="contained" color="primary">
+      <Button className="dashButtonY" variant="contained"  >
         Youtube
       </Button>
-      <Button variant="contained" color="primary">
+      <Button className="dashButtonT" variant="contained">
         Twitter
       </Button>
     </div>

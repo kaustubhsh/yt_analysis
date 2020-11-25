@@ -12,9 +12,12 @@ const useStyles = makeStyles((theme) => ({
     },
   search: {
     position: 'relative',
-    backgroundColor: '#00FFFF',
-    borderRadius: '5px',
-    marginLeft: 0,
+    backgroundColor: '#ededed',
+    height: '50%',
+    width : '70%',
+    borderRadius: '40px',
+  
+    
     
   },
   searchIcon: {
@@ -48,7 +51,7 @@ export default function SearchAppBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Enter a Keyword"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
