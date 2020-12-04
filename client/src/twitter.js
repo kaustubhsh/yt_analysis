@@ -39,8 +39,8 @@ export default function SearchAppBar() {
   const classes = useStyles();
 
   function onChangeHandler(event){
-    const name = event.target.value
-    console.log(name);
+    const twitterUrl = event.target.value
+    console.log(twitterUrl);
   }
 
   return (

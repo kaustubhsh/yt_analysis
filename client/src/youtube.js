@@ -41,8 +41,8 @@ export default function SearchAppBar() {
   const classes = useStyles();
 
   function onChangeHandler(event){
-    const name = event.target.value
-    console.log(name);
+    const youtubeUrl = event.target.value
+    console.log(youtubeUrl);
   }
 
   return (
