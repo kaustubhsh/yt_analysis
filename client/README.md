@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Requirements
+- Python 3.6;
+- beautifulsoup4;
+- Nodejs;
+- matplotlib;
+- pandas;
+- NPM;
+- nltk;
+
+pip3 install -r requirements.txt
+
+npm install
+npm start
