@@ -1,8 +1,7 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,9 +15,6 @@ const useStyles = makeStyles((theme) => ({
     height: '50%',
     width : '70%',
     borderRadius: '40px',
-  
-    
-    
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -34,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     },
@@ -42,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchAppBar() {
   const classes = useStyles();
+
+  function onChangeHandler(event){
+    const name = event.target.value
+    console.log(name);
+  }
 
   return (
     <div className={classes.root}>
@@ -57,6 +57,7 @@ export default function SearchAppBar() {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              onChange={onChangeHandler}
             />
         </div>
         </Toolbar>
