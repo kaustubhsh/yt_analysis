@@ -1,6 +1,7 @@
 const express = require('express');
 const {PythonShell} = require ('python-shell');
 const csv = require('csvtojson');
+// var sleep = require('sleep');
 
 const fs = require('fs');
 
@@ -22,36 +23,41 @@ const port = process.env.port || 80;
 app.get('/', (req, res) => {
 	res.render('index.ejs');
 });
-app.get('/contact', (req, res) => {
-	res.render('contact.ejs');
-});
-app.get('/geotagging',(req,res)=>{
-	res.render('map.ejs')
-})
+// app.get('/contact', (req, res) => {
+// 	res.render('contact.ejs');
+// });
+// app.get('/geotagging',(req,res)=>{
+// 	res.render('map.ejs')
+// })
 app.get('/twitteranalysis',(req,res)=>{
 	res.render('twitterAnalysis.ejs')
 })
-app.get('/similarhashtags',(req,res)=>{
-	res.render('hashtagAnalysis.ejs')
+app.get('/youtubeanalysis', (req, res) => {
+	res.render('youtubeanalysis.ejs')
 })
+// app.get('/similarhashtags',(req,res)=>{
+// 	res.render('hashtagAnalysis.ejs')
+// })
 app.get('/usertrends',(req,res)=>{
 	res.render('trendsAnalysis.ejs')
 })
-app.get('/accountcheck',(req,res)=>{
-	res.render('accountcheck.ejs')
-})
-app.get('/instagram',(req,res)=>{
-	res.render('instagram.ejs')
-})
-app.get('/documentation',(req,res)=>{
-	res.render('documentation.ejs')
-})
+// app.get('/accountcheck',(req,res)=>{
+// 	res.render('accountcheck.ejs')
+// })
+// app.get('/instagram',(req,res)=>{
+// 	res.render('instagram.ejs')
+// })
+// app.get('/documentation',(req,res)=>{
+// 	res.render('documentation.ejs')
+// })
 // app.get('/test',(req,res)=>{
 // 	let coordinates = "28.617245604288797, 77.20818042755127"
 // 	res.render('twitterOutput.ejs',{data:coordinates});
 // })
 
-
+function redirct_page(req,res){
+	res.render('error.ejs');
+}
 app.get('/instagram/result',(req,res)=>{
 	let options = {
 		mode: 'text', 
@@ -98,6 +104,31 @@ app.get('/geotagging/result',(req,res)=>{
 	
 });
 
+app.get('/youtube/result', (req, res) => {
+	// sleep.sleep(10);
+	// let options = {
+	// 	mode: 'text',
+	// 	pythonOptions: ['-u'], // get print results in real-time
+	// 	scriptPath: `${__dirname}/../Python_Scripts/twitter`,
+	// 	args: [twitterUsername]
+	// }
+	// sleep(1000);
+	// server.setTimeout(100);
+	res.render('error.ejs');
+	// setTimeout(redirct_page(req,res), 3000);
+
+	// PythonShell.run('func_call.py', options, function (err, results) {
+	// 	if (err) {
+	// 		console.log(err);
+	// 		res.render('error.ejs');
+	// 		//throw err;
+	// 	}
+	// 	else {
+	// 		res.render('twitterUserOutput.ejs', { username: twitterUsername });
+	// 	}
+
+	// });
+})
 app.get('/twitter/result',(req,res)=>{
 	let options = {
 		mode: 'text', 
@@ -227,6 +258,12 @@ app.post('/instagram',(req,res)=>{
 	instaUsername = req.body.username;//saving username in the current session storage
 	console.log('username',instaUsername);
 	res.redirect('/instagram/result');//redircting to send basic result
+})
+app.post('/youtube', (req, res) => {
+	twitterUsername = req.body.username//saving username in the current session storage
+	// stringToFind = req.body.string;
+	console.log(twitterUsername)
+	res.redirect('/youtube/result');//redircting to send basic result
 })
 app.post('/twitter',(req,res)=>{
 	twitterUsername = req.body.username//saving username in the current session storage

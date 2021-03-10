@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TIGMINT</title>
+    <title>Twitter Analyser</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="/img/favicon2.png" />
@@ -64,14 +64,14 @@ font-family: 'Open Sans', sans-serif; -->
     <!-- HEADER -->
     <header>
       <div class="topnav" id="myTopnav">
-        <img
+        <!-- <img
           onclick="location.href='/'"
           class="logo-top"
           src="/img/tigmint_logo.png"
-        />
+        /> -->
         <a href="/" class="active">Get Started</a>
-        <a href="/documentation">Documentation</a>
-        <a href="/contact">Contact Us</a>
+        <!-- <a href="/documentation">Documentation</a> -->
+        <!-- <a href="/contact">Contact Us</a> -->
         <a href="javascript:void(0);" class="icon" onclick="navRes()">
           <i class="fa fa-bars"></i>
         </a>
@@ -90,11 +90,12 @@ font-family: 'Open Sans', sans-serif; -->
         <!--  topic  -->
         <div style="align-items: left; left: 0; margin-top: -50%;">
           <h1>
-            TIGMINT
+            Analyser
           </h1>
 
           <p class="full-form">
-            Twitter, Instagram and Geo-Tagging Media Intelligence
+            Twitter
+            <!-- Twitter, Instagram and Geo-Tagging Media Intelligence -->
             <br />
           </p>
         </div>
@@ -120,13 +121,19 @@ font-family: 'Open Sans', sans-serif; -->
         <a href="/twitteranalysis" class="btn btn-sm animated-button thar-one">Twitter Analyser</a>
       </div>
       <div id="btnClick2" class="col-md-3 col-sm-3 col-xs-6">
+              <a href="#" class="btn btn-sm animated-button thar-two"><<------------------->></a>
+      </div>
+      <div id="btnClick3" class="col-md-3 col-sm-3 col-xs-6">
+              <a href="/youtubeanalysis"class="btn btn-sm animated-button thar-two">Youtube Analyser</a>
+      </div>
+      <!-- <div id="btnClick2" class="col-md-3 col-sm-3 col-xs-6">
         <a href="/geotagging"class="btn btn-sm animated-button thar-two">Geotagging Tweets</a>
       </div>
       <div id="btnClick3" class="col-md-3 col-sm-3 col-xs-6">
         <a href="/instagram" class="btn btn-sm animated-button thar-three">Instagram Module</a>
-      </div>
+      </div> -->
     </div>
-    <div class="options">
+    <!-- <div class="options">
       <div id="btnClick1" class="col-md-3 col-sm-3 col-xs-6">
         <a href="/similarhashtags" class="btn btn-sm animated-button thar-four">Twitter: Generate Similar Hashtags</a>
       </div>
@@ -141,7 +148,7 @@ font-family: 'Open Sans', sans-serif; -->
       <div id="btnClick1" class="col-md-3 col-sm-3 col-xs-6">
         <a href="/accountcheck" class="btn btn-sm animated-button thar-four">Username Checker</a>
       </div>
-    </div>
+    </div> -->
 
     <!-- ------------------- OUTPUT manipulation jQuery & JavaScript ------------------- -->
     <script>
@@ -158,18 +165,18 @@ font-family: 'Open Sans', sans-serif; -->
         }
       });
 
-      $('#btnClick2').on('click', function () {
-        if (
-          $('#0').css('display') != 'none' ||
-          $('#1').css('display') != 'none' ||
-          $('#3').css('display') != 'none' ||
-          $('#4').css('display') != 'none'
-        ) {
-          $('#2').show().siblings('div').hide();
-        } else if ($('#2').css('display') != 'none') {
-          $('#0').show().siblings('div').hide();
-        }
-      });
+      // $('#btnClick2').on('click', function () {
+      //   if (
+      //     $('#0').css('display') != 'none' ||
+      //     $('#1').css('display') != 'none' ||
+      //     $('#3').css('display') != 'none' ||
+      //     $('#4').css('display') != 'none'
+      //   ) {
+      //     $('#2').show().siblings('div').hide();
+      //   } else if ($('#2').css('display') != 'none') {
+      //     $('#0').show().siblings('div').hide();
+      //   }
+      // });
 
       $('#btnClick3').on('click', function () {
         if (
@@ -184,55 +191,55 @@ font-family: 'Open Sans', sans-serif; -->
         }
       });
 
-      $('#btnClick4').on('click', function () {
-        if (
-          $('#0').css('display') != 'none' ||
-          $('#1').css('display') != 'none' ||
-          $('#2').css('display') != 'none' ||
-          $('#3').css('display') != 'none'
-        ) {
-          $('#4').show().siblings('div').hide();
-        } else if ($('#4').css('display') != 'none') {
-          $('#0').show().siblings('div').hide();
-        }
-      });
+      // $('#btnClick4').on('click', function () {
+      //   if (
+      //     $('#0').css('display') != 'none' ||
+      //     $('#1').css('display') != 'none' ||
+      //     $('#2').css('display') != 'none' ||
+      //     $('#3').css('display') != 'none'
+      //   ) {
+      //     $('#4').show().siblings('div').hide();
+      //   } else if ($('#4').css('display') != 'none') {
+      //     $('#0').show().siblings('div').hide();
+      //   }
+      // });
     </script>
     <!--  --------------------------------- Footer here  ----------------------------------      -->
     <footer class="footer-distributed">
       <div class="footer-left">
-        <img src="/img/footer-logo.png" />
+        <!-- <img src="/img/footer-logo.png" /> -->
         <p class="footer-links">
           <!-- <a href="./documentation.html" class="link-1">Documentation</a> -->
-          <a href="/contact">Contact Us</a>
+          <!-- <a href="/contact">Contact Us</a> -->
         </p>
-        <p>TiGMint © 2020</p>
+        <!-- <p>TiGMint © 2020</p> -->
       </div>
 
       <div class="footer-center">
         <h1>MADE in INDIA</h1>
         <hr />
-        <p>
+        <!-- <p>
           This Website is made under the Gurugram Police Cyber Security
           Internship.
-        </p>
+        </p> -->
         <hr />
         Stay Safe! Stay Secure!
       </div>
 
       <div class="footer-right">
-        <p class="footer-company-about">
+        <!-- <p class="footer-company-about">
           <span>About TIGMINT</span>
           Twitter, Instagram, GeoTagging Media Intelligence
-        </p>
+        </p> -->
 
-        <div class="footer-icons">
+        <!-- <div class="footer-icons">
           <a target="_blank" href="/contact"
             ><i class="fa fa-group"></i
           ></a>
           <a target="_blank" href="https://github.com/TIGMINT/TIGMINT"
             ><i class="fa fa-github"></i
           ></a>
-        </div>
+        </div> -->
       </div>
     </footer>
 
